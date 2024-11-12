@@ -22,17 +22,17 @@ align-items: center;
     background-color:white;
     transition: color 0.5s ease;
 }
-
 .topnav img{
-    height:45.5px;
+    height:75px;
 }
 .link-container{
     display:right;
     padding-left:438px;
+    gap:20px;
+    margin-left:auto;
+    margin-right:20px;
 }
-.link-container a{
-    padding:0;
-}
+
 .cart{
     height:73.5px;
 }
