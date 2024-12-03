@@ -52,7 +52,8 @@ form{
 }
 input{
     height:50px;
-    font-size:30px;
+    width: 373px;
+    font-size:20px;
     border-radius: 50px;
     border-style:double;
 }
@@ -79,4 +80,10 @@ input[type = "submit"]:active{
     display:flex;
     flex-wrap:wrap;
     justify-content: center;
+}
+
+.error{
+    color:red;
+    font-weight:bold;
+    text-align: center;
 }
