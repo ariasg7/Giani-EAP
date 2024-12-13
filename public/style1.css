@@ -1,0 +1,232 @@
+body{
+    margin:0;
+    max-width: 100%;
+}
+.topnav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: space-between;
+    flex-direction:column;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000; /* Ensures it stays on top of other content */
+    margin:0;
+    padding:0;
+}
+.topnav a {
+    
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.topnav a:hover {
+    color: black;
+    background-color: white;
+    transition: color 0.5s ease;
+}
+.topnav img {
+    height: 60px;
+}
+.image-container img{
+    height: 75px;
+    display:block;
+}
+
+.link-container{
+    display: flex; /* Activates Flexbox layout for the container */
+    justify-content: space-evenly; /* Ensures equal spacing between links */
+    align-items: center; /* Aligns links vertically in the center (if container height changes) */
+    width: 100%; /* Makes the container span the full width of its parent */
+    margin: 0 auto; /* Centers the container itself if it has a smaller width */
+}
+.hero {
+    height: 175vh;
+    background: url('images/GianiPic2.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /*background-color: rgba(0, 0, 0, 0.7);*/
+    text-align: center;
+}
+
+.form-container{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding:25px;
+    border-radius: 20px;
+    /*position: absolute;*/
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+form{
+    display:block;
+    flex-direction:column;
+    /*background-color: rgba(0, 0, 0, 0.8);*/
+}
+input{
+    /*height:50px;
+    width: 373px;*/
+    height: 35px;
+    font-size:20px;
+    border-radius: 20px;
+    border-style:double;
+}
+input[type = "text"]{
+    text-indent:15px;
+}
+input[type = "password"]{
+    text-indent:15px;
+}
+input[type = "submit"]{
+    width:147px;
+    font-weight: bold;
+}
+input[type = "submit"]:active{
+    transform: scale(0.98);
+    font-weight: bold;
+}
+.footer-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer{
+    background-color:black;
+    height:200px;
+}
+.footer-links{
+    margin-left:50px;
+}
+.footer-links p{
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top:7px;
+    padding-bottom:7px;
+}
+footer h3{
+    color:white;
+    font-weight: bold;
+    margin-left:50px;
+}
+* {
+    margin:0;
+    padding:0;
+
+}
+.profile-body{
+    max-width: 100%;
+    overflow: hidden;
+}
+html::-webkit-scrollbar{
+    display:none;
+}
+body::-webkit-scrollbar,html::-webkit-scrollbar {
+    display: none;
+}
+.error{
+    color:red;
+}
+
+.table{
+    margin-top: -200px;
+}
+.table table{
+    border-spacing: 40px;
+    border-collapse: separate;
+}
+.table th,.table td {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+}
+.table img{
+    width:75%;
+    height:75%;
+
+}
+
+.music-table img:hover{
+    transform: scale(1.1);
+}
+.music-table p{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.cart-table table{
+    width:1250px;
+}
+.cart-table th{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.cart-table p{
+    font-size: 25px;
+}
+.product{width:30%;}
+.quantity{width:10%}
+.space{width:20%;}
+.price{width:10%;}
+.cart-table{margin-top:-750px;}
+
+.product-container{
+    display:flex;
+    align-items: center;
+    height: auto;
+    min-height: 80px;
+    margin: 10px 0; 
+}
+.product-container div{
+    flex-grow: 1;
+}
+.product-container img{
+    width:60px;
+    height:60px;
+}
+.product-container p{
+    font-size: 20px;
+}
+.cart-table{
+    position: relative;
+    height: auto;
+}
+
+.card-table table{
+    border-collapse:collapse;
+}
+
+input[type="number"]{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    color:white;
+    border: 5px white;
+}
+.number-form{
+    border:3px white;
+}
+
+.checkout{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    gap:5px;
+}
+.checkout-container p{
+    font-size:17px;
+}
+.checkout-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 20px;  
+}

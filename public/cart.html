@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style1.css">
+    <script defer src = "register.js"></script>
+</head>
+<body>
+        <nav class = "topnav">
+            <div class = "image-container">
+                <img src = "images/Giani EAP.png">
+            </div>
+                <div class = "link-container">
+                    <a href = "main.html"><img src="images/Home.png"></a>
+                    <a href = "music.html"><img src="images/Music.png"></a>
+                    <a href = "merch.html"><img src="images/merch.png"></a>
+                    <a href = "register.html"><img src="images/User.png"></a> 
+                    <a href = "cart.html"><img src ="images/bag.png"></a>
+                </div>
+        </nav>
+        <div class="hero">
+            <div class = "cart-table">
+                <table>
+                    <tr>
+                        <th class = "product"><p>Product</p></th>
+                        <th class = "quantity"><p>#</p></th>
+                        <th class = "space"></th>
+                        <th class = "price"><p>$</p></th>
+                    </tr>
+                    <tr>
+                        <th><div class = "product-container">
+                            <div><img src = "images/bag.png"></div>
+                                <div>
+                                    <p>Product Name</p>
+                                    <p>Price</p>
+                                    <p id = "remove">remove</p>
+                                </div>
+                            </div>
+                        </th>
+                        <th><input type = "number" name = "quantity" min = "1" max = "100" step = "1"></th>
+                        <th></th>
+                        <th><p>$</p></th>
+                    </tr>
+                    <tr>
+                        <th><div class = "product-container">
+                            <div><img src = "images/bag.png"></div>
+                                <div>
+                                    <p>Product Name</p>
+                                    <p>Price</p>
+                                    <p>Remove</p>
+                                </div>
+                            </div>
+                        </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th colspan="4">
+                            <div class = "checkout-container">
+                                <div class = "checkout">
+                                    <p>Subtotal:</p>
+                                    <p>Tax:</p>
+                                    <p>Total:</p>
+                                    <input type = "Submit" placeholder = "Proceed to Checkout">
+                                </div> 
+                            </div>
+                        </th>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+        <footer>
+            <br>
+            <div class = "footer-container">
+                <h3>INFO</h3>
+                <div class = "footer-links">
+                    <p>About</p>
+                    <p>Contact</p>
+                    <p>Subscribe</p>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
