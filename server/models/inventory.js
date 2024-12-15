@@ -11,7 +11,7 @@ async function createTable(){
                 );`
     await con.query(sql);
 }
-createTable();
+//createTable();
 
 const inventory = {
     InventoryID: 1,
