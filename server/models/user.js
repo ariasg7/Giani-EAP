@@ -16,6 +16,7 @@ async function createTable(){
         )`;
     await con.query(sql);
 }
+    
 createTable();
 
 const user = {
