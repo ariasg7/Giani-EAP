@@ -51,7 +51,7 @@ async function register(e){
         
         // Handle successful registration
         console.log("Registration successful:", response);
-        alert(`Welcome, ${response.user.firstName}! Registration successful.`);
+        alert(`Welcome, ${response.firstName}! Registration successful.`);
 
         // Redirect to login or another page
         window.location.href = "../main.html"; // Replace with your actual target page

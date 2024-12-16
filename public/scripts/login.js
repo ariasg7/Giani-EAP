@@ -45,7 +45,7 @@ async function login(e){
         window.location.href = "../main.html"; // Replace with your actual target page
       } catch (error) {
         // Handle login errors
-        console.error("Login failed:", error.message);
-        alert("Login failed: " + error.message);
+        console.error("Login failed:", error);
+        alert("Login failed: " + error);
       }
 }
