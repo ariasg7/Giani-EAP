@@ -21,7 +21,7 @@ let loginForm = document.getElementById("login-form-container");
 if (loginForm){
     loginForm.addEventListener('submit',login)
 }
-function login(e){
+async function login(e){
     e.preventDefault()
 
     const loginUser ={
