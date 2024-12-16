@@ -30,8 +30,8 @@ const user = {
 async function userExists(user){
     let sql = `
         SELECT * FROM user
-        WHERE email = "${user.email}"
-    `
+        WHERE email = "${user.email}"`
+        console.log("User email:", user.email);
     return await con.query(sql);
 }
 
