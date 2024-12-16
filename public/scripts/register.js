@@ -18,7 +18,6 @@ let registerForm = document.getElementById("register-form-container");
 if (registerForm){
     registerForm.addEventListener('submit',register)
 }
-
 async function register(e){
 
     e.preventDefault()
@@ -30,6 +29,7 @@ async function register(e){
         password: document.getElementById("registerPassword").value,
         verifyPassword: document.getElementById("verifyPassword").value
     }
+    console.log(user);
     if (!user.firstName || !user.lastName || !user.email || !user.password || !user.verifyPassword) {
         document.getElementById("error").innerHTML = "Please fill out all fields";
         return;
@@ -54,7 +54,7 @@ async function register(e){
         alert(`Welcome, "${response.firstName}"! Registration successful.`);
 
         // Redirect to login or another page
-        window.location.href = "../login.html"; // Replace with your actual target page
+        //window.location.href = "../login.html"; // Replace with your actual target page
     } catch (error) {
         // Handle registration errors
         console.error("Registration failed:", error.message);
