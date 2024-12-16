@@ -27,14 +27,15 @@ async function register(e){
         lastName: document.getElementById("lastName").value,
         email: document.getElementById("registerEmail").value.trim(),
         password: document.getElementById("registerPassword").value,
-        verifyPassword: document.getElementById("verifyPassword").value
     }
+    let verifyPassword = document.getElementById("verifyPassword").value
+
     console.log(user);
-    if (!user.firstName || !user.lastName || !user.email || !user.password || !user.verifyPassword) {
+    if (!user.firstName || !user.lastName || !user.email || !user.password || !verifyPassword) {
         document.getElementById("error").innerHTML = "Please fill out all fields";
         return;
     }
-    if(user.password !== user.verifyPassword){
+    if(user.password !== verifyPassword){
         console.log(user)
         document.getElementById("error").innerHTML = "Passwords do not match"
         return
