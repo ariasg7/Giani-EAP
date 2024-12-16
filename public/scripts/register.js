@@ -57,7 +57,7 @@ async function register(e){
         window.location.href = "../main.html"; // Replace with your actual target page
     } catch (error) {
         // Handle registration errors
-        console.error("Registration failed:", error.message);
-        document.getElementById("error").innerHTML = `Registration failed: ${error.message}`;
+        console.error("Registration failed:", error);
+        document.getElementById("error").innerHTML = `Registration failed: An unknown error occurred`;
     }
 }
