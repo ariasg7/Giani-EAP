@@ -1,3 +1,18 @@
+async function fetchData(route = '', data = {}, methodType) {
+    const response = await fetch(`http://localhost:3000${route}`, {
+      method: methodType, // *POST, PUT, DELETE, etc.
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+    if (response.ok) {
+      return await response.json(); // parses JSON response into native JavaScript objects
+    } else {
+      throw await response.json();
+    }
+  }   
+
 /* Register */
 let registerForm = document.getElementById("register-form-container");
 if (registerForm){
@@ -27,6 +42,7 @@ async function register(e){
     //clear error message once passwords are the same
     document.getElementById("error").innerHTML = ""
 
+    /*
     try {
         document.getElementById("error").innerHTML = "";
 
@@ -35,7 +51,7 @@ async function register(e){
         
         // Handle successful registration
         console.log("Registration successful:", response);
-        alert(`Welcome, ${response.firstName}! Registration successful.`);
+        alert(`Welcome, ${response.user.firstName}! Registration successful.`);
 
         // Redirect to login or another page
         window.location.href = "../main.html"; // Replace with your actual target page
@@ -43,5 +59,14 @@ async function register(e){
         // Handle registration errors
         console.error("Registration failed:", error.message);
         document.getElementById("error").innerHTML = `Registration failed: ${error.message}`;
-    }
+    }*/
+        fetchData('/users/register', user, 'POST')
+        .then(data => {
+          if (!data.message) {
+            window.location.href = "../main.html"
+          }
+        })
+        .catch(err => {
+          console.log(err.message)
+        })
 }
