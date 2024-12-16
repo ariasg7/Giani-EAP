@@ -14,8 +14,8 @@ router
   
   .post('/login', async (req, res) => {//asynchronous function that will handle the incoming request (req) and send the response (res).
     try {
-      let user = await User.login(req.body)
-      res.send({...user, password: undefined})
+      let cUser = await User.login(req.body)
+      res.send({...cUser, password: undefined})
     } catch(err) {
       res.status(401).send({message: err.message})
     }
