@@ -26,7 +26,7 @@ async function register(e){
     const user = {
         firstName: document.getElementById("firstName").value,
         lastName: document.getElementById("lastName").value,
-        email: document.getElementById("registerEmail").value,
+        email: document.getElementById("registerEmail").value.trim(),
         password: document.getElementById("registerPassword").value,
         verifyPassword: document.getElementById("verifyPassword").value
     }
@@ -51,13 +51,13 @@ async function register(e){
         
         // Handle successful registration
         console.log("Registration successful:", response);
-        alert(`Welcome, ${response.firstName}! Registration successful.`);
+        alert(`Welcome, "${response.firstName}"! Registration successful.`);
 
         // Redirect to login or another page
-        window.location.href = "../main.html"; // Replace with your actual target page
+        window.location.href = "../login.html"; // Replace with your actual target page
     } catch (error) {
         // Handle registration errors
-        console.error("Registration failed:", error);
+        console.error("Registration failed:", error.message);
         document.getElementById("error").innerHTML = `Registration failed: An unknown error occurred`;
     }
 }
