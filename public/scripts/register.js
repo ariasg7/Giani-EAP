@@ -42,7 +42,7 @@ async function register(e){
     //clear error message once passwords are the same
     document.getElementById("error").innerHTML = ""
 
-    /*
+    
     try {
         document.getElementById("error").innerHTML = "";
 
@@ -59,14 +59,5 @@ async function register(e){
         // Handle registration errors
         console.error("Registration failed:", error.message);
         document.getElementById("error").innerHTML = `Registration failed: ${error.message}`;
-    }*/
-        fetchData('/users/register', user, 'POST')
-        .then(data => {
-          if (!data.message) {
-            window.location.href = "../main.html"
-          }
-        })
-        .catch(err => {
-          console.log(err.message)
-        })
+    }
 }
