@@ -25,8 +25,8 @@ async function login(e){
     e.preventDefault()
 
     const loginUser ={
-        loginEmail: document.getElementById("loginEmail").value.trim(),
-        loginPassword: document.getElementById("loginPassword").value
+        email: document.getElementById("loginEmail").value.trim(),
+        password: document.getElementById("loginPassword").value
     }
     console.log(loginUser)
     
