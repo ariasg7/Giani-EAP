@@ -4,6 +4,7 @@ async function fetchData(route = '', data = {}, methodType) {
       headers: {
         'Content-Type': 'application/json'
       },
+      //data would include everything that printful would need
       body: JSON.stringify(data) // body data type must match "Content-Type" header
     });
     if (response.ok) {
@@ -45,14 +46,13 @@ async function register(e){
 
     
     try {
-        document.getElementById("error").innerHTML = "";
 
         // Use fetchData to send a POST request to your backend
         const response = await fetchData('/users/register', user, 'POST');
         
         // Handle successful registration
         console.log("Registration successful:", response);
-        alert(`Welcome, "${response.firstName}"! Registration successful.`);
+        alert(`Welcome, "${user.firstName}"! Registration successful.`);
 
         // Redirect to login or another page
         //window.location.href = "../login.html"; // Replace with your actual target page
